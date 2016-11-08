@@ -1,61 +1,60 @@
-Scripts/data/
+InventoryLink2/Scripts/data/
 
-Scripts/DataTables/
+InventoryLink2/Scripts/DataTables/
 
-Scripts/datatables/plugins/
+InventoryLink2/Scripts/datatables/plugins/
 
-Scripts/datatables/responsive/
+InventoryLink2/Scripts/datatables/responsive/
 
-Scripts/flot/
+InventoryLink2/Scripts/flot/
 
-Scripts/floot-tooltip/
+InventoryLink2/Scripts/floot-tooltip/
 
-Scripts/metisMenu/
+InventoryLink2/Scripts/metisMenu/
 
-Scripts/morrisjs/
+InventoryLink2/Scripts/morrisjs/
 
-Scripts/raphael/
+InventoryLink2/Scripts/raphael/
 
-Scripts/sb-admin/
+InventoryLink2/Scripts/sb-admin/
 
-Scripts/_reference.js
+InventoryLink2/Scripts/_reference.js
 
-Scripts/bootstrap.js
+InventoryLink2/Scripts/bootstrap.js
 
-Scripts/bootstrap.min.js
+InventoryLink2/Scripts/bootstrap.min.js
 
-Scripts/jquery-1.10.2.intellisense.js
+InventoryLink2/Scripts/jquery-1.10.2.intellisense.js
 
-Scripts/jquery-1.10.2.js
+InventoryLink2/Scripts/jquery-1.10.2.js
 
-Scripts/jquery-1.10.2.min.js
+InventoryLink2/Scripts/jquery-1.10.2.min.js
 
-Scripts/jquery-1.10.2.min.map
+InventoryLink2/Scripts/jquery-1.10.2.min.map
 
-Scripts/jquery.unobtrusive-ajax.js
+InventoryLink2/Scripts/jquery.unobtrusive-ajax.js
 
-Scripts/jquery.unobtrusive-ajax.min.js
+InventoryLink2/Scripts/jquery.unobtrusive-ajax.min.js
 
-Scripts/jquery.validate-vsdoc.js
+InventoryLink2/Scripts/jquery.validate-vsdoc.js
 
-Scripts/jquery.validate.js
+InventoryLink2/Scripts/jquery.validate.js
 
-Scripts/jquery.validate.min.js
+InventoryLink2/Scripts/jquery.validate.min.js
 
-Scripts/jquery.validate.unobtrusive.js
+InventoryLink2/Scripts/jquery.validate.unobtrusive.js
 
-Scripts/jquery.validate.unobtrusive.min.js
+InventoryLink2/Scripts/jquery.validate.unobtrusive.min.js
 
-Scripts/less-1.5.1.js
+InventoryLink2/Scripts/less-1.5.1.js
 
-Scripts/less-1.5.1.min.js
+InventoryLink2/Scripts/less-1.5.1.min.js
 
-Scripts/modernizr-2.6.2.js
+InventoryLink2/Scripts/modernizr-2.6.2.js
 
-Scripts/respond.js
+InventoryLink2/Scripts/respond.js
 
-Scripts/respond.min.js
-
+InventoryLink2/Scripts/respond.min.js
 
 InventoryLink2/bin/Antlr3.Runtime.dll
 
