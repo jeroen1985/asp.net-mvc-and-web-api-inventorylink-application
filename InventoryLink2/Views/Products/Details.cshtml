@@ -1,0 +1,90 @@
+﻿@model InventoryLink2.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductIdExternal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductIdExternal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductAttribute1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductAttribute1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductAttribute2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductAttribute2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductAttributeA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductAttributeA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductAttributeB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductAttributeB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

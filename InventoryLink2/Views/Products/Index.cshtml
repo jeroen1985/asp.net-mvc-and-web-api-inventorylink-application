@@ -1,0 +1,95 @@
+﻿@using InventoryLink2.Models;
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using Microsoft.Owin;
+@using Owin;
+@model IEnumerable<InventoryLink2.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{ 
+    var user = User.Identity;
+    ApplicationDbContext context = new ApplicationDbContext();
+    var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+    var roles = userManager.GetRoles(user.GetUserId());
+
+    string role = string.Join(",", roles.ToArray());
+}
+
+<h2>Products @role</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped table-bordered" id="products-table" cellspacing="0" width="100%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductIdExternal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductAttribute1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductAttribute2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductAttributeA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductAttributeB)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductIdExternal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductAttribute1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductAttribute2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductAttributeA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductAttributeB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.InventoryLink 2 - AnyWhere, AnyTime </title>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("IventoryLink", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="@Url.Action("Index", "Manage")"><i class="fa fa-user fa-fw"></i> Manage User</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            @Html.Partial("_LoginPartial")
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="@Url.Action("Index", "Home")"><i class="fa fa-home fa-fw"></i>Home</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                        <li>
+                            <a href="@Url.Action("Index", "Products")"><i class="fa fa-product-hunt fa-fw"></i>Products</a>
+                        </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                        <li>
+                            <a href="#"><i class="fa fa-cog fa-fw"></i>App Settings<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="@Url.Action("Index", "Categories")">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Locations")">Locations</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        }        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            @RenderBody()
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js-vendor")
+    @Scripts.Render("~/bundles/js-custom")    
+    @RenderSection("scripts", required: false)
+</body>
+</html>
