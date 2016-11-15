@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace InventoryLink2.Models
 {
@@ -42,8 +43,10 @@ namespace InventoryLink2.Models
         [Required]
         public int LocationId { get; set; }
 
+        [JsonIgnore]
         public virtual Category Category { get; set; }
 
+        [JsonIgnore]
         public virtual Location Location { get; set; }
     }
 }

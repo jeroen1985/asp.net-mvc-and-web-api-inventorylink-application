@@ -88,8 +88,15 @@ namespace InventoryLink2.Controllers.Api
             }
 
             db.Products.Add(product);
-            db.SaveChanges();
 
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
             return CreatedAtRoute("DefaultApi", new { id = product.ProductId }, product);
         }
 
