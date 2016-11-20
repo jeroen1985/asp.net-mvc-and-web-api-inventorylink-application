@@ -80,7 +80,15 @@ namespace InventoryLink2.Controllers.Api
             }
 
             db.Locations.Add(location);
-            db.SaveChanges();
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = location.LocationId }, location);
         }

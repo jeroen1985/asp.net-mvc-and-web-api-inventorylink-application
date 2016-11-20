@@ -24,6 +24,7 @@ namespace InventoryLink2.Controllers.Api
         }
 
         // GET: api/Products/5
+        // Example of HTTPResponseMessage VS IHttpActionResult
         [ResponseType(typeof(Product))]
         public HttpResponseMessage GetProduct(int id)
         {
@@ -37,7 +38,7 @@ namespace InventoryLink2.Controllers.Api
             Product product = db.Products.Find(id);
             if (product == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return Request.CreateResponse(HttpStatusCode.NotFound, "Product id not available");
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, product);

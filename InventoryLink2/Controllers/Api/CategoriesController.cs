@@ -80,7 +80,15 @@ namespace InventoryLink2.Controllers.Api
             }
 
             db.Categories.Add(category);
-            db.SaveChanges();
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = category.CategoryId }, category);
         }
