@@ -12,6 +12,7 @@ using InventoryLink2.Models;
 
 namespace InventoryLink2.Controllers.Api
 {
+    [Authorize]
     public class CategoriesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();

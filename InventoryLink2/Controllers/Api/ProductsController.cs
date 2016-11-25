@@ -13,6 +13,7 @@ using InventoryLink2.Helpers;
 
 namespace InventoryLink2.Controllers.Api
 {
+    [Authorize]
     public class ProductsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
